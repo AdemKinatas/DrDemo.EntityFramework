@@ -1,0 +1,34 @@
+﻿@model List<BookDetail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Book's Name</th>
+                        <th>Book's Author</th>
+                        <th>Book's Publisher</th>
+                        <th>Book's Unit Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var bookDetail in Model)
+                    {
+                        <tr>
+                            <td>@bookDetail.BookName</td>
+                            <td>@bookDetail.AuthorName</td>
+                            <td>@bookDetail.PublisherName</td>
+                            <td>@bookDetail.UnitPrice</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
