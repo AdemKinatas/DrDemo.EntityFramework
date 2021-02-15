@@ -10,7 +10,6 @@ using System.Web.Security;
 
 namespace DrDemo_MvcWebUI.Controllers
 {
-    [Authorize(Roles = "admin,user")]
     public class HomeController : Controller
     {
         IBookService _bookservice;
