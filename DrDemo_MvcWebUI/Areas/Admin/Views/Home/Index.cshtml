@@ -1,8 +1,39 @@
-﻿
+﻿@model List<BookDetail>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Admin/Home/Index</h2>
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Book's Name</th>
+                        <th>Book's Author</th>
+                        <th>Book's Publisher</th>
+                        <th>Book's Unit Price</th>
+                        <th>Update/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var bookDetail in Model)
+                    {
+                        <tr>
+                            <td>@bookDetail.BookName</td>
+                            <td>@bookDetail.AuthorName</td>
+                            <td>@bookDetail.PublisherName</td>
+                            <td>@bookDetail.UnitPrice</td>
+                            <td>
+                                @Html.ActionLink("Update", "UpdateBook", "Home", new { id = bookDetail.BookId }, new { @class = "btn btn-warning btn-sm" })
+                                @Html.ActionLink("Delete", "DeleteBook", "Home", new { id = bookDetail.BookId }, new { @class = "btn btn-danger btn-sm" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

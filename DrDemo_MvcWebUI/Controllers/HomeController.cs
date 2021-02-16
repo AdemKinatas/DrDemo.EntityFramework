@@ -10,17 +10,21 @@ using System.Web.Security;
 
 namespace DrDemo_MvcWebUI.Controllers
 {
+    //[Authorize(Roles = "admin,user")]
     public class HomeController : Controller
     {
         IBookService _bookservice;
+        ICategoryService _categoryService;
 
-        public HomeController(IAppUserService appUserService, IBookService bookservice)
+        public HomeController(IBookService bookservice, ICategoryService categoryService)
         {
             _bookservice = bookservice;
+            _categoryService = categoryService;
         }
 
         public ActionResult Index()
         {
+            ViewBag.Categories = _categoryService.GetList();
             var model = _bookservice.GetBookDetailList();
 
             return View(model);

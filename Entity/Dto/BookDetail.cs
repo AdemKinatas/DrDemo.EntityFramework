@@ -9,6 +9,7 @@ namespace Entity.Dto
 {
     public class BookDetail:IDto
     {
+        public int BookId { get; set; }
         public string BookName { get; set; }
         public string CategoryName { get; set; }
         public string AuthorName { get; set; }

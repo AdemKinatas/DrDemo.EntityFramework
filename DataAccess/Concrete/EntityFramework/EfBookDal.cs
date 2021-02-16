@@ -23,6 +23,7 @@ namespace DataAccess.Concrete.EntityFramework
                              //join a in context.Authors on b.AuthorId equals a.Id
                              select new BookDetail()
                              {
+                                 BookId=b.Id,
                                  BookName=b.BookName,
                                  //CategoryName=c.CategoryName,
                                  //AuthorName = a.AuthorName,

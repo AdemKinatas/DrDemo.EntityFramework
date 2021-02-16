@@ -160,7 +160,6 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Manager\ManagerAreaRegistration.cs" />
-    <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SignInAndSignUpController.cs" />
     <Compile Include="Global.asax.cs">
@@ -219,6 +218,24 @@
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\.gitignore" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\css\shop-homepage.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\gulpfile.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\index.html" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\jquery\jquery.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\jquery\jquery.min.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\jquery\jquery.slim.js" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -228,7 +245,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
@@ -242,7 +258,6 @@
     <Folder Include="Areas\Manager\Data\" />
     <Folder Include="Areas\Manager\Views\Shared\" />
     <Folder Include="js\" />
-    <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bootstrap\css\bootstrap-grid.css.map" />
@@ -282,6 +297,24 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\.travis.yml" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\LICENSE" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\package-lock.json" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\package.json" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\README.md" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\jquery\jquery.min.map" />
+    <Content Include="Templates\startbootstrap-shop-homepage-gh-pages\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
