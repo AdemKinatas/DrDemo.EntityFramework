@@ -42,24 +42,26 @@
             <div class="col-lg-3">
 
                 <h1 class="my-4">Kategoriler</h1>
-                @foreach (var category in ViewBag.Categories as List<Category>)
+                @foreach (var category in ViewBag.Categories as List<CategoryDetail>)
                 {
                     if (category.Parent == null)
                     {
-                        <!-- Default dropright button -->
-                        <div class="btn-group dropright">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <div class="dropdown dropright">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 @category.CategoryName
                             </button>
-                            <div class="dropdown-menu">
-                                
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                @foreach (var c in category.Children)
+                                {
+                                    <a role="button" class="dropdown-item btn btn-primary" href="#">@c.CategoryName</a>
+                                }
                             </div>
                         </div>
                     }
                 }
             </div>
             <!-- /.col-lg-3 -->
-
             <div class="col-lg-9">
 
                 <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -108,7 +110,7 @@
                             </div>
                         </div>
                     }
-                    
+
 
                 </div>
                 <!-- /.row -->

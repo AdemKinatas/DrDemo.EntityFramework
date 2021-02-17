@@ -35,6 +35,11 @@ namespace Business.Concrete
             return _categoryDal.Get(filter);
         }
 
+        public List<CategoryDetail> GetCategoryDetails()
+        {
+            return _categoryDal.GetCategoryDetails(); 
+        }
+
         public List<Category> GetList(Expression<Func<Category, bool>> filter = null)
         {
             return _categoryDal.GetList(filter);

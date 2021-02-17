@@ -11,6 +11,6 @@ namespace Business.Abstract
 {
     public interface ICategoryService : IGenericService<Category>
     {
-       
+        List<CategoryDetail> GetCategoryDetails();
     }
 }

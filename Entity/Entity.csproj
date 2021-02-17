@@ -53,6 +53,7 @@
     <Compile Include="Concrete\Role.cs" />
     <Compile Include="Concrete\Shop.cs" />
     <Compile Include="Dto\BookDetail.cs" />
+    <Compile Include="Dto\CategoryDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,5 +13,20 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCategoryDal : EfEntityRepositoryBase<Category, DrDemoContext>, ICategoryDal
     {
+        public List<CategoryDetail> GetCategoryDetails()
+        {
+            using (var context=new DrDemoContext())
+            {
+                var result = context.Categories.Select(x => new CategoryDetail
+                {
+                    CategoryId = x.Id,
+                    CategoryName = x.CategoryName,
+                    Parent = x.Parent,
+                    Children = x.Children
+                }).ToList();
+
+                return result;
+            }
+        }
     }
 }
