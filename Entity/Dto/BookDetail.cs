@@ -17,5 +17,6 @@ namespace Entity.Dto
         public string Summary { get; set; }
         public int AmountSold { get; set; }
         public decimal UnitPrice { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

@@ -15,6 +15,7 @@ namespace Entity.Concrete
         public DateTime PublishDate { get; set; }
         public int AmountSold { get; set; }
         public decimal UnitPrice { get; set; }
+        public string ImageUrl { get; set; }
 
 
         public int AuthorId { get; set; }

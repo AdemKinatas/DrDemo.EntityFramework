@@ -168,7 +168,7 @@
     <Compile Include="Models\AppUserRoleProvider.cs" />
     <Compile Include="Models\ViewModels\AppUserForSignInVM.cs" />
     <Compile Include="Models\ViewModels\AppUserVM.cs" />
-    <Compile Include="Models\ViewModels\BookListViewModel.cs" />
+    <Compile Include="Models\ViewModels\BookDetailListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -213,7 +213,9 @@
     <Content Include="Areas\Manager\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Images\about-about-us-page-background.jpg" />
+    <Content Include="Images\Books\1.jpg" />
+    <Content Include="Images\Books\2.jpg" />
+    <Content Include="Images\Books\3.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />

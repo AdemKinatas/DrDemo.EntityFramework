@@ -33,7 +33,8 @@ namespace DataAccess.Concrete.EntityFramework
                                  PublisherName=b.Publisher.PublisherName,
                                  Summary =b.Summary,
                                  AmountSold=b.AmountSold,
-                                 UnitPrice=b.UnitPrice
+                                 UnitPrice=b.UnitPrice,
+                                 ImageUrl=b.ImageUrl
                              };
                 return result.ToList();
             }

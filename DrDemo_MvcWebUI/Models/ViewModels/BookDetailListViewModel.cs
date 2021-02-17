@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DrDemo_MvcWebUI.Models.ViewModels
 {
-    public class BookListViewModel
+    public class BookDetailListViewModel
     {
         public List<BookDetail> Books { get; set; }
     }

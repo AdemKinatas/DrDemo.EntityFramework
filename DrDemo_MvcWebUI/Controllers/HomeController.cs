@@ -25,7 +25,10 @@ namespace DrDemo_MvcWebUI.Controllers
         public ActionResult Index()
         {
             ViewBag.Categories = _categoryService.GetList();
-            var model = _bookservice.GetBookDetailList();
+            var model = new BookDetailListViewModel
+            {
+                Books = _bookservice.GetBookDetailList()
+            };
 
             return View(model);
         }
