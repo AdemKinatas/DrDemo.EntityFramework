@@ -36,7 +36,9 @@
                 {
                     new Category{ CategoryName="Kitap"},
                     new Category{ CategoryName="Edebiyat", ParentId=1},
-                    new Category{ CategoryName="Şiir", ParentId=1},
+                    new Category{ CategoryName="Tarih", ParentId=1},
+                    new Category{ CategoryName="Roman", ParentId=2},
+                    new Category{ CategoryName="Şiir", ParentId=2}
                 };
 
                 context.Categories.AddRange(categories);
@@ -72,9 +74,9 @@
             {
                 List<Book> books = new List<Book>()
                 {
-                    new Book{ BookName="Tutunamayanlar", AuthorId=1, PublisherId=1, CategoryId=2, AmountSold=250000, PublishDate=DateTime.Parse("2020-10-11"), UnitPrice=50, Summary="Mükemmel bir Kitap",ImageUrl="1.jpg"},
-                    new Book{ BookName="Tehlikeli Oyunlar", AuthorId=1, PublisherId=2, CategoryId=2, AmountSold=300000, PublishDate=DateTime.Parse("2019-10-11"), UnitPrice=45, Summary="Mükemmel bir Kitap",ImageUrl="2.jpg"},
-                    new Book{ BookName="Suskunlar", AuthorId=2, PublisherId=1, CategoryId=2, AmountSold=150000, PublishDate=DateTime.Parse("2018-08-11"), UnitPrice=50, Summary="Güzel bir Kitap",ImageUrl="3.jpg"},
+                    new Book{ BookName="Tutunamayanlar", AuthorId=1, PublisherId=1, CategoryId=4, AmountSold=250000, PublishDate=DateTime.Parse("2020-10-11"), UnitPrice=50, Summary="Mükemmel bir Kitap",ImageUrl="1.jpg"},
+                    new Book{ BookName="Tehlikeli Oyunlar", AuthorId=1, PublisherId=2, CategoryId=4, AmountSold=300000, PublishDate=DateTime.Parse("2019-10-11"), UnitPrice=45, Summary="Mükemmel bir Kitap",ImageUrl="2.jpg"},
+                    new Book{ BookName="Suskunlar", AuthorId=2, PublisherId=1, CategoryId=4, AmountSold=150000, PublishDate=DateTime.Parse("2018-08-11"), UnitPrice=50, Summary="Güzel bir Kitap",ImageUrl="3.jpg"},
                 };
 
                 context.Books.AddRange(books);

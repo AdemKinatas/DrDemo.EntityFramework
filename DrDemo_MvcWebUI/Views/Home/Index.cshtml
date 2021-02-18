@@ -11,6 +11,17 @@
     <title>Index</title>
     <link href="~/Templates/startbootstrap-shop-homepage-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Templates/startbootstrap-shop-homepage-gh-pages/css/shop-homepage.css" rel="stylesheet" />
+    <link href="~/css/dropdown.css" rel="stylesheet" />
+
+    @*<style>
+            #nav ul {
+                display: none;
+            }
+
+            #nav li:hover > ul {
+                display: block;
+            }
+        </style>*@
 </head>
 <body>
 
@@ -34,32 +45,72 @@
         </div>
     </nav>
 
+
+
     <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
             <div class="col-lg-3">
-
                 <h1 class="my-4">Kategoriler</h1>
+
+                @*@foreach (var category in ViewBag.Categories as List<CategoryDetail>)
+                    {
+                        if (category.Parent == null)
+                        {
+                            <ul id="nav">
+                                <li>
+                                    <a href="#">@category.CategoryName</a>
+                                    <ul >
+                                        @foreach (var sc1 in category.Children)
+                                        {
+                                            <li>
+                                                <a href="#">@sc1.CategoryName</a>
+                                                <ul>
+                                                    @foreach (var sc2 in sc1.Children)
+                                                    {
+                                                        <li><a href="#">@sc2.CategoryName</a></li>
+                                                    }
+                                                </ul>
+                                            </li>
+                                        }
+                                    </ul>
+                                </li>
+                            </ul>
+                        }
+                    }*@
+
                 @foreach (var category in ViewBag.Categories as List<CategoryDetail>)
                 {
                     if (category.Parent == null)
                     {
+                        <div class="container my-4">
+                            <div class="dropdown dropright">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    @category.CategoryName
+                                </button>
+                                <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                                    <li class="dropdown-divider"></li>
+                                    @foreach (var sc1 in category.Children)
+                                    {
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" tabindex="-1" href="#">@sc1.CategoryName</a>
+                                            <ul class="dropdown-menu">
+                                                @foreach (var sc2 in sc1.Children)
+                                                {
+                                                    <li class="dropdown-submenu">
+                                                      <a class="dropdown-item" href="#">@sc2.CategoryName</a>
+                                                    </li>
+                                                }
 
-                        <div class="dropdown dropright">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                @category.CategoryName
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                @foreach (var c in category.Children)
-                                {
-                                    <a role="button" class="dropdown-item btn btn-primary" href="#">@c.CategoryName</a>
-                                }
+                                            </ul>
+                                        </li>
+                                    }
+                                </ul>
                             </div>
                         </div>
                     }
                 }
+
             </div>
             <!-- /.col-lg-3 -->
             <div class="col-lg-9">

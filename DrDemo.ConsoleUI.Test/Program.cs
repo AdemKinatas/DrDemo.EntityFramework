@@ -27,13 +27,17 @@ namespace DrDemo.ConsoleUI.Test
 
             foreach (var category in categories)
             {
-                if (category.Parent==null)
+                if (category.Parent == null)
                 {
                     Console.WriteLine(category.CategoryName);
 
                     foreach (var child in category.Children)
                     {
                         Console.WriteLine("--" + child.CategoryName);
+                        foreach (var item in child.Children)
+                        {
+                            Console.WriteLine("----" + item.CategoryName);
+                        }
                     }
                 }
             }
