@@ -35,7 +35,7 @@ namespace Business.Concrete
             return _categoryDal.Get(filter);
         }
 
-        public List<CategoryDetail> GetCategoryDetails()
+        public List<CategoryDetail> GetCategoryDetails(Expression<Func<Category, bool>> filter = null)
         {
             return _categoryDal.GetCategoryDetails(); 
         }

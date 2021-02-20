@@ -35,7 +35,7 @@ namespace Business.Concrete
             return _bookDal.Get(filter);
         }
 
-        public List<BookDetail> GetBookDetailList()
+        public List<BookDetail> GetBookDetailList(Expression<Func<Book, bool>> filter = null)
         {
             return _bookDal.GetBookDetailList();
         }

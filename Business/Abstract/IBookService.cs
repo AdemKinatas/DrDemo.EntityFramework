@@ -11,6 +11,6 @@ namespace Business.Abstract
 {
     public interface IBookService : IGenericService<Book>
     {
-        List<BookDetail> GetBookDetailList();
+        List<BookDetail> GetBookDetailList(Expression<Func<Book, bool>> filter = null);
     }
 }
