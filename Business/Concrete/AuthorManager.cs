@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entity.Concrete;
+using Entity.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,11 @@ namespace Business.Concrete
         public Author Get(Expression<Func<Author, bool>> filter)
         {
             return _authorDal.Get(filter);
+        }
+
+        public List<AuthorDetail> GetAuthorDetails(Expression<Func<Author, bool>> filter = null)
+        {
+            return _authorDal.GetAuthorDetails(filter);
         }
 
         public List<Author> GetList(Expression<Func<Author, bool>> filter = null)

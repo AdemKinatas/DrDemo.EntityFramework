@@ -35,6 +35,15 @@ namespace DrDemo_MvcWebUI
             builder.RegisterType<CategoryManager>().As<ICategoryService>();
             builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();
 
+            builder.RegisterType<AuthorManager>().As<IAuthorService>();
+            builder.RegisterType<EfAuthorDal>().As<IAuthorDal>();
+
+            builder.RegisterType<PublisherManager>().As<IPublisherService>();
+            builder.RegisterType<EfPublisherDal>().As<IPublisherDal>();
+
+            builder.RegisterType<ShopManager>().As<IShopService>();
+            builder.RegisterType<EfShopDal>().As<IShopDal>();
+
             builder.RegisterType<AppUserManager>().As<IAppUserService>();
             builder.RegisterType<EfAppUserDal>().As<IAppUserDal>();
 

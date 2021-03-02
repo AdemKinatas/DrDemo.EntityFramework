@@ -1,4 +1,5 @@
 ﻿using Entity.Concrete;
+using Entity.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace Business.Abstract
 {
     public interface IAuthorService : IGenericService<Author>
     {
-
+        List<AuthorDetail> GetAuthorDetails(Expression<Func<Author, bool>> filter = null);
     }
 }

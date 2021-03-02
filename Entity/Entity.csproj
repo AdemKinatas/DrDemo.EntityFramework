@@ -52,6 +52,7 @@
     <Compile Include="Concrete\Publisher.cs" />
     <Compile Include="Concrete\Role.cs" />
     <Compile Include="Concrete\Shop.cs" />
+    <Compile Include="Dto\AuthorDetail.cs" />
     <Compile Include="Dto\BookDetail.cs" />
     <Compile Include="Dto\CategoryDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -18,29 +18,46 @@ namespace DrDemo.ConsoleUI.Test
         {
             DrDemoContext db = new DrDemoContext();
 
-            var categories = db.Categories.Select(c => new
+            var authors = db.Authors.Select(x => new
             {
-                c.Parent,
-                c.CategoryName,
-                c.Children
+                x.Id,
+                x.AuthorName,
+                x.BirthDate,
+                x.Biography,
+                x.Books
             }).ToList();
-
-            foreach (var category in categories)
+            foreach (var author in authors)
             {
-                if (category.Parent == null)
+                foreach (var book in author.Books)
                 {
-                    Console.WriteLine(category.CategoryName);
-
-                    foreach (var child in category.Children)
-                    {
-                        Console.WriteLine("--" + child.CategoryName);
-                        foreach (var item in child.Children)
-                        {
-                            Console.WriteLine("----" + item.CategoryName);
-                        }
-                    }
+                    Console.WriteLine(book.BookName);
                 }
             }
+
+
+            //var categories = db.Categories.Select(c => new
+            //{
+            //    c.Parent,
+            //    c.CategoryName,
+            //    c.Children
+            //}).ToList();
+
+            //foreach (var category in categories)
+            //{
+            //    if (category.Parent == null)
+            //    {
+            //        Console.WriteLine(category.CategoryName);
+
+            //        foreach (var child in category.Children)
+            //        {
+            //            Console.WriteLine("--" + child.CategoryName);
+            //            foreach (var item in child.Children)
+            //            {
+            //                Console.WriteLine("----" + item.CategoryName);
+            //            }
+            //        }
+            //    }
+            //}
 
             Console.ReadLine();
         }

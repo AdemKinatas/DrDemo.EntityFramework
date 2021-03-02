@@ -10,11 +10,11 @@ using System.Web.Security;
 
 namespace DrDemo_MvcWebUI.Controllers
 {
-    public class SignInAndSignUpController : Controller
+    public class AppUserController : Controller
     {
         IAppUserService _appUserService;
 
-        public SignInAndSignUpController(IAppUserService appUserService)
+        public AppUserController(IAppUserService appUserService)
         {
             _appUserService = appUserService;
         }
